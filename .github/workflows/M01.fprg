@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="M01"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-18 11:26:34 AM"/>
+        <attribute name="created" value="VXNlcjtMQVBUT1AtSkoySDVLTjk7MjAyNC0xMC0xODsxMDowMDo1MyBBTTsyNzEz"/>
+        <attribute name="edited" value="VXNlcjtMQVBUT1AtSkoySDVLTjk7MjAyNC0xMC0xODsxMToyNjozNCBBTTszOzI4MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="totalcredit" type="Integer" array="False" size=""/>
+            <declare name="indeks" type="Integer" array="False" size=""/>
+            <declare name="performa" type="Real" array="False" size=""/>
+            <declare name="indekssementara" type="Real" array="False" size=""/>
+            <declare name="performaakhir" type="Real" array="False" size=""/>
+            <declare name="score" type="Real" array="False" size=""/>
+            <declare name="A, AB, B, BC, C, D, E" type="Real" array="False" size=""/>
+            <declare name="grade" type="String" array="False" size=""/>
+            <declare name="credit" type="String" array="False" size=""/>
+            <assign variable="totalcredit" expression="4.0"/>
+            <input variable="credit"/>
+            <while expression="credit!=&quot;---&quot;">
+                <input variable="grade"/>
+                <if expression="grade=&quot;A&quot;">
+                    <then>
+                        <assign variable="score" expression="4.0"/>
+                    </then>
+                    <else>
+                        <if expression="grade=&quot;AB&quot;">
+                            <then>
+                                <assign variable="score" expression="3.5"/>
+                            </then>
+                            <else>
+                                <if expression="grade=&quot;B&quot;">
+                                    <then>
+                                        <assign variable="score" expression="3.0"/>
+                                    </then>
+                                    <else>
+                                        <if expression="grade=&quot;BC&quot;">
+                                            <then>
+                                                <assign variable="score" expression="2.5"/>
+                                            </then>
+                                            <else>
+                                                <if expression="grade=&quot;C&quot;">
+                                                    <then>
+                                                        <assign variable="score" expression="2.0"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="grade=&quot;D&quot;">
+                                                            <then>
+                                                                <assign variable="score" expression="1.0"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="grade=&quot;E&quot;">
+                                                                    <then>
+                                                                        <assign variable="score" expression="0.0"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <assign variable="score" expression="0.0"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="performa" expression="totalcredit*score"/>
+                <output expression="performa" newline="True"/>
+                <input variable="credit"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
