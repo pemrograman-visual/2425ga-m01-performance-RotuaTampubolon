@@ -1,6 +1,5 @@
 // 12S24028 - Rotua Immanuela Tampubolon
 // 12S24002 - Petra Ignatius Pengayoman Naibaho
-
 import java.util.*;
 import java.lang.Math;
 
@@ -57,4 +56,3 @@ public class M01 {
         }
     }
 }
-
